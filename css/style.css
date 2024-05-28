@@ -1,0 +1,568 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-transform: capitalize;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+.header {
+    background-image: radial-gradient(rgb(35, 35, 35), black);
+    height: 100vh;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    padding: 20px;
+    position: relative;
+    top: 25px;
+    margin: 0 50px;
+    box-shadow: 1px 1px 10px white;
+    border-radius: 10px 20px;
+    z-index: 999;
+    transition: .5s;
+}
+
+.menu {
+    height: 24px;
+    width: 30px;
+    position: relative;
+    cursor: pointer;
+    display: none;
+}
+
+.menu span {
+    background-color: rgb(0, 185, 0);
+    width: 100%;
+    position: absolute;
+    height: 4px;
+    transition: .5s;
+}
+
+#first {
+    top: 0;
+}
+
+#center {
+    top: 10px;
+}
+
+#last {
+    top: 20px;
+}
+
+#first.first {
+    top: 10px;
+    transform: rotate(45deg);
+    background-color: red;
+}
+
+#last.last {
+    top: 10px;
+    transform: rotate(-45deg);
+    background-color: red;
+}
+
+#center.center {
+    opacity: 0;
+}
+
+header nav .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+header nav .logo i {
+    font-size: 22px;
+    color: rgb(0, 185, 0);
+}
+
+header nav .links {
+    display: flex;
+    gap: 20px;
+}
+
+header nav .links P {
+    font-weight: 500;
+    transition: .5s;
+    cursor: pointer;
+}
+
+header nav .links P:hover {
+    color: rgb(0, 185, 0);
+}
+
+header nav .social-link {
+    display: flex;
+    gap: 15px;
+}
+
+header nav .social-link i {
+    cursor: pointer;
+    transition: .5s;
+}
+
+header nav .social-link i:hover {
+    color: rgb(0, 185, 0);
+}
+
+.header .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 120px 0 0;
+}
+
+.header .content .left {
+    margin-left: 80px;
+}
+
+.header .content img {
+    width: 30%;
+    margin-right: 80px;
+    border-radius: 10px 20px;
+    border: 2px solid rgb(0, 185, 0);
+    animation: rgb 2s infinite;
+    position: relative;
+}
+
+@keyframes rgb {
+    0% {
+        top: 0px;
+    }
+
+    50% {
+        top: 20px;
+    }
+
+    100% {
+        top: 0;
+    }
+}
+
+.header .content .left p {
+    margin: 15px 0;
+    font-size: 18px;
+}
+.header .content .left p #auto{
+    color: rgb(0, 185, 0);
+    font-size: 30px;
+}
+
+.header .content .left button {
+    border: 2px solid rgb(0, 185, 0);
+    background: none;
+    padding: 15px;
+    border-radius: 10px 20px;
+    font-size: 15px;
+    color: rgb(0, 185, 0);
+    transition: .5s;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+.header .content .left button:hover {
+    background-color: rgb(0, 185, 0);
+    color: white;
+}
+
+.about {
+    text-align: center;
+    background-image: url(../img/WhatsApp\ Image\ 2022-09-22\ at\ 8.52.23\ PM.jpeg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 200px;
+    background-color: rgba(0, 0, 0, 0.579);
+    background-blend-mode: overlay;
+}
+
+.about .title h2 {
+    padding: 15px;
+    font-size: 30px;
+}
+
+.about .content2 {
+    padding-top: 30px;
+}
+
+.about .content p {
+    line-height: 35px;
+    font-size: 18px;
+}
+.project {
+    background-image: url(../img/d14577e7c67880bd075c5ac39d357f78.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    text-align: center;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.579);
+    background-blend-mode: overlay;
+}
+
+.project .title h2 {
+    padding: 15px;
+    font-size: 30px;
+}
+
+.project .content {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+.project .content .card {
+    background-image: url(../img/Screenshot\ 2024-03-01\ 144427.png);
+    width: 400px;
+    height: 200px;
+    background-size: cover;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.project .content .card .content2 {
+    height: 0;
+    overflow: hidden;
+    transition: .5s;
+    width: 100%;
+}
+
+.project .content .card:hover .content2 {
+    background-color: rgb(124, 166, 180);
+    display: block;
+    height: 100%;
+}
+
+.project .content .card .content2 h3 {
+    margin: 20px 0;
+}
+
+.project .content .card .content2 a {
+    background-color: green;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px 20px;
+    transition: .5s;
+}
+
+.project .content .card .content2 p {
+    margin: 20px 0 40px;
+}
+
+.project .content .card .content2 a:hover {
+    background-color: rgb(0, 102, 0);
+}
+
+.project .content .card2 {
+    background-image: url(../img/Screenshot\ 2024-03-01\ 151105.png);
+    width: 400px;
+    height: 200px;
+    background-size: cover;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.project .content .card2 .content2 {
+    height: 0;
+    overflow: hidden;
+    transition: .5s;
+    width: 100%;
+}
+
+.project .content .card2:hover .content2 {
+    background-color: rgb(124, 166, 180);
+    display: block;
+    height: 100%;
+}
+
+.project .content .card2 .content2 h3 {
+    margin: 20px 0;
+}
+
+.project .content .card2 .content2 a {
+    background-color: green;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px 20px;
+    transition: .5s;
+}
+
+.project .content .card2 .content2 p {
+    margin: 20px 0 40px;
+}
+
+.project .content .card2 .content2 a:hover {
+    background-color: rgb(0, 102, 0);
+}
+.skills{
+    background-image: radial-gradient(black, rgb(35, 35, 35));
+    padding: 10px;
+}
+.skills .title h2{
+    text-align: center;
+    padding: 15px;
+    font-size: 30px;
+}
+.skills .skills-1 .skill .progress{
+    position: relative;
+    width: 500px;
+    height: 30px;
+    background-color: white;
+    margin: 10px;
+}
+.skills .skills-1{
+    display: flex;
+    justify-content: center;
+}
+.skills .skills-1 .skill .progress span{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background-color: rgb(0, 185, 0);
+    transition: width 0.3s linear;
+    text-align: center;
+}
+.contact{
+    background-image: radial-gradient(black, rgb(35, 35, 35));
+}
+.contact .title h2 {
+    padding: 15px;
+    font-size: 30px;
+    text-align: center;
+}
+.contact .contact-us{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contact .contact-us form{
+    width: 600px;
+    text-align: center;
+}
+.contact .contact-us form .input-box{
+    display: flex;
+    justify-content: space-between;
+}
+.contact .contact-us form .input-box .input-field{
+    width: 48.5%;
+}
+.contact .contact-us form .textarea-field .item{
+    resize: none;
+}
+.contact .contact-us form button{
+    padding: 12px 32px;
+    background: rgb(0, 185, 0);
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    box-shadow: 0 0 10px rgb(0, 185, 0);
+    font-size: 16px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: .5s;
+}
+.contact .contact-us form button:hover{
+    box-shadow: none;
+}
+.field .error-txt{
+    font-size: 14.5px;
+    color: #d93025;
+    text-align: left;
+    margin: -5px 0 10px;
+    display: none;
+}
+.field .item{
+    width: 100%;
+    padding: 18px;
+    background-color: transparent;
+    border: 2px solid rgb(0, 185, 0);
+    outline: none;
+    border-radius: 6px;
+    font-size: 16px;
+    color: #ededed;
+    margin: 12px 0;
+}
+.field .item.error{
+    border-color: #d93025;
+}
+.textarea-field .error-txt{
+    margin-top: -10px;
+}
+.field .item::placeholder{
+    color: rgba(255, 255, 255, 0.3);
+}
+.field.error .error-txt{
+    display: block;
+}
+footer {
+    background-image: radial-gradient(black, rgb(35, 35, 35));
+    padding: 20px;
+    text-align: center;
+}
+
+footer nav p {
+    padding: 10px;
+}
+
+footer nav .icon {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    font-size: 22px;
+    padding: 10px;
+}
+
+footer nav .icon i {
+    cursor: pointer;
+    transition: .5s;
+}
+
+footer nav .icon i:hover {
+    color: rgb(0, 185, 0);
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: black;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgb(0, 185, 0);
+    border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(0, 102, 0);
+}
+
+@media(max-width: 850px) {
+    header nav .links {
+        position: absolute;
+        top: 100%;
+        flex-direction: column;
+        background-color: black;
+        width: 200px;
+        text-align: center;
+        padding: 20px 0;
+        transition: .5s;
+        border-radius: 10px 20px;
+        border: 2px solid rgb(0, 185, 0);
+        margin-top: 10px;
+        overflow: hidden;
+        right: -420px;
+    }
+
+    header nav .links.i {
+        right: 0;
+    }
+
+    header nav .social-link {
+        display: none;
+    }
+
+    .menu {
+        display: block;
+    }
+
+    .header {
+        position: relative;
+    }
+
+    .header .content {
+        display: block;
+        text-align: center;
+        position: relative;
+        height: 100%;
+        position: absolute;
+        padding: 0;
+        top: 40%;
+    }
+
+    .header .content img {
+        display: none;
+    }
+
+    .header .content .left {
+        margin-left: 0;
+        padding-left: 0;
+    }
+
+    .services .content {
+        display: block;
+        text-align: center;
+        padding: 0;
+        margin: auto;
+        width: fit-content;
+    }
+
+    .services {
+        padding: 30px 0;
+    }
+
+    .services .content .card {
+        margin-top: 30px;
+    }
+
+    .project .content {
+        display: block;
+        text-align: center;
+        margin: auto;
+        width: fit-content;
+        padding: 0;
+    }
+
+    .project .content .card2 {
+        margin-top: 10px;
+    }
+
+    .project .content :is(.card, .card2) {
+        width: 355px;
+    }
+    .about .content2 {
+        padding: 0;
+    }
+
+    .about .content2 p {
+        line-height: normal;
+    }
+    .skills .skills-1 .skill .progress{
+        width: 250px;
+    }
+}
+
+@media(max-width: 500px) {
+    header nav .links {
+        position: absolute;
+        top: 100%;
+        flex-direction: column;
+        background-color: black;
+        width: 100%;
+        text-align: center;
+        padding: 20px 0;
+        transition: .5s;
+        border-radius: 10px 20px;
+        border: 2px solid rgb(0, 185, 0);
+        margin-top: 10px;
+        overflow: hidden;
+    }
+}
