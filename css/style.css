@@ -536,7 +536,7 @@ footer nav .icon i:hover {
     }
 
     .project .content :is(.card, .card2) {
-        width: 355px;
+        width: 350px;
     }
     .about .content2 {
         padding: 0;
