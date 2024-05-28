@@ -548,6 +548,15 @@ footer nav .icon i:hover {
     .skills .skills-1 .skill .progress{
         width: 250px;
     }
+    .contact .contact-us form .input-box{
+        width: 100%;
+    }
+    .field .item{
+        text-align: center;
+    }
+    .field .mes{
+        width: 90%;
+    }
 }
 
 @media(max-width: 500px) {
