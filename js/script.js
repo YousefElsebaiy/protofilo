@@ -78,10 +78,10 @@ function sendEmail(){
     let bodyMessage = `Full Name: ${fullName.value}<br> Email: ${emailAddress.value}<br> Phone Number: ${phoneNumber.value}<br> Message: ${message2.value}`
     Email.send({
         Host : "smtp.elasticemail.com",
-        Username : "developerfrontend739@gmail.com",
-        Password : "167493B810CBBA4824F7C58EDD4DEF42E9F2",
-        To : 'developerfrontend739@gmail.com',
-        From : "developerfrontend739@gmail.com",
+        Username : "infinitydevelopment767@gmail.com",
+        Password : "F9DD007CE4118C7B6336AD96213F68F1A000",
+        To : 'infinitydevelopment767@gmail.com',
+        From : "infinitydevelopment767@gmail.com",
         Subject : subject.value,
         Body : bodyMessage,
     }).then(
@@ -123,16 +123,23 @@ function checkInputs(){
 }
 function checkEmail(){
     let emailRegex = /^([a-z\d\.-]+)@([a-z\d-]+)\.([a-z]{2,3})(\.[a-z]{2.3})?$/
+    let text = document.querySelector(".error-txt.email")
     if(!emailAddress.value.match(emailRegex)){
         emailAddress.classList.add("error")
         emailAddress.parentElement.classList.add("error")
+        if(emailAddress.value != ""){
+            text.innerText = "Enter a valid email address"
+        }
+        else{
+            text.innerText = "Email Address Can't Be Blank"
+        }
     }
     else{
         emailAddress.classList.remove("error")
         emailAddress.parentElement.classList.remove("error")
     }
 }
-form.addEventListener("submit", (e) => {
+form.addEventListener("submit", (e) => {    
     e.preventDefault()
     checkInputs()
     if(!fullName.classList.contains("error") && !emailAddress.classList.contains("error") && !phoneNumber.classList.contains("error") && !subject.classList.contains("error") && !message2.classList.contains("error")){
